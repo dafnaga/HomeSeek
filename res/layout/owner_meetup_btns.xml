@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.1"
+    android:background="@color/light_blue"
+    android:orientation="horizontal" >
+
+    <com.postpc.homeseek.widget.CustomButton
+        android:id="@+id/remove_visit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/custom_button_login"
+        android:onClick="onRemoveMeetupBtnClick"
+        android:textColor="@color/light_blue_txt"
+        android:text="@string/remove_visiting_date_txt"
+        android:textSize="15sp" />
+
+</LinearLayout>

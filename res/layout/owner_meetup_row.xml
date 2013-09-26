@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+    <com.postpc.homeseek.widget.CustomTextView
+        android:id="@+id/meetup_date_txt"
+        android:layout_margin="5dp"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content" />
+
+    <com.postpc.homeseek.widget.CustomTextView
+        android:id="@+id/meetup_visitors_txt"
+        android:layout_margin="5dp"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content" />
+	<com.postpc.homeseek.widget.CustomTextView
+        android:id="@+id/meetup_hours_txt"
+        android:layout_margin="5dp"        
+        android:layout_width="90dp"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

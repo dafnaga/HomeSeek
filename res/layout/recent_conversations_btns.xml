@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.1"
+    android:orientation="horizontal" >
+    <com.postpc.homeseek.widget.CustomButton
+        android:id="@+id/choose_contant_btn"
+        android:layout_width="0dp"
+        android:paddingRight="15dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@drawable/custom_button_login"
+        android:onClick="onChooseContactClick"
+        android:text="@string/choose_new_contact_to_chat_str"
+        android:textColor="@color/light_blue_txt"
+        android:textSize="15sp" />
+    
+</LinearLayout>

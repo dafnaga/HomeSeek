@@ -1,0 +1,521 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    android:orientation="vertical"
+    tools:context=".SearchApartmentsActivity" >
+
+    <!-- Top Ruler -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.31"
+        android:background="@color/light_blue"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/background_image_top_ruler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/background_image_top_ruler_description"
+            android:scaleType="centerCrop"
+            android:src="@drawable/top_ruler_heigt22" />
+
+        <ImageView
+            android:id="@+id/top_ruler_separator1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="80dp"
+            android:contentDescription="@string/background_image_top_ruler_description"
+            android:src="@drawable/top_ruler_seperator" />
+
+        <ImageView
+            android:id="@+id/top_ruler_separator2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/background_image_top_ruler_description"
+            android:src="@drawable/top_ruler_seperator" />
+
+        <ImageView
+            android:id="@+id/top_ruler_separator3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="80dp"
+            android:contentDescription="@string/background_image_top_ruler_description"
+            android:src="@drawable/top_ruler_seperator" />
+
+        <ImageView
+            android:id="@+id/top_ruler_fav_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="22dp"
+            android:contentDescription="@string/background_image_top_ruler_description"
+            android:onClick="onClientApartmentsBtnClick"
+            android:src="@drawable/top_ruler_star_icon" />
+
+        <ImageView
+            android:id="@+id/top_ruler_chat_msg_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="102dp"
+            android:contentDescription="@string/background_image_top_ruler_description"
+            android:onClick="onRecentConversationsClick"
+            android:src="@drawable/top_ruler_chat_msg_icon" />
+
+        <ImageView
+            android:id="@+id/top_ruler_map_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="98dp"
+            android:contentDescription="@string/background_image_top_ruler_description"
+            android:onClick="onMapSearchBtnClick"
+            android:src="@drawable/top_ruler_map_search_icon" />
+
+        <ImageView
+            android:id="@+id/top_ruler_search_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="98dp"
+            android:contentDescription="@string/background_image_top_ruler_description"
+            android:onClick="onSearchApartmentsBtnClick"
+            android:src="@drawable/top_ruler_search_icon"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/top_ruler_back_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="22dp"
+            android:contentDescription="@string/background_image_top_ruler_description"
+            android:onClick="onBackBtnClick"
+            android:src="@drawable/top_ruler_back_icon" />
+    </RelativeLayout>
+
+    <!-- Top Ruler End -->
+
+
+    <!-- Middle Search Section -->
+
+    <ScrollView
+        android:id="@+id/scroll_owner_info"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="@drawable/background_login"
+        android:padding="22dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.postpc.homeseek.widget.CustomTitleTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="6dp"
+                android:text="@string/search_apartments_str"
+                android:textColor="@color/dark_blue_txt"
+                android:textSize="30sp" />
+
+            <com.postpc.homeseek.widget.CustomButton
+                 android:layout_width="match_parent"
+                 android:layout_height="30dp"
+                 android:layout_marginBottom="7dp"
+                 android:layout_marginTop="7dp"
+                 android:background="@drawable/set_search_area_btn"
+                 android:onClick="onMapSearchBtnClick"
+                 android:text="@string/switch_to_map_search"
+                 android:textColor="@color/light_blue_txt"
+                 android:id="@+id/switch_to_map_btn"
+                 android:visibility="gone" />
+            
+            <com.postpc.homeseek.widget.CustomButton
+                 android:layout_width="match_parent"
+                 android:layout_height="30dp"
+                 android:layout_marginBottom="7dp"
+                 android:layout_marginTop="7dp"
+                 android:background="@drawable/set_search_area_btn"
+                 android:onClick="onSearchApartmentsBtnClick"
+                 android:text="@string/switch_to_address_search"
+                 android:textColor="@color/light_blue_txt"
+                 android:id="@+id/switch_to_address_btn"                 
+                 android:visibility="gone" />
+            
+            <LinearLayout
+                android:id="@+id/search_apatment_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin" >
+
+                <!-- Choose Rent or Buy -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" >
+
+                    <com.postpc.homeseek.widget.CustomTextView
+                        android:id="@+id/type_search_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rent_buy_chooser_txt"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <RadioGroup
+                        android:id="@+id/type_radio_group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/rent_radio_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="@string/radio_type_rent" />
+
+                        <RadioButton
+                            android:id="@+id/buy_radio_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/radio_type_buy" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <!-- Choose Rent or Buy End -->
+
+
+                <!-- Search Geographic Details -->
+
+                <LinearLayout
+                    android:id="@+id/address_fields_wrap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <!-- Choose City -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <com.postpc.homeseek.widget.CustomTextView
+                            android:id="@+id/choose_city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:text="@string/city_txt" />
+
+                        <EditText
+                            android:id="@+id/city_edt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:inputType="text" />
+                    </LinearLayout>
+
+                    <!-- Choose City End -->
+
+
+                    <!-- Choose Neighborhood -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <com.postpc.homeseek.widget.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:text="@string/neighborhood_txt" />
+
+                        <EditText
+                            android:id="@+id/neighborhood_edt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:inputType="text" />
+                    </LinearLayout>
+
+                    <!-- Choose Neighborhood End -->
+
+
+                    <!-- Choose Street -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <com.postpc.homeseek.widget.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:text="@string/street_txt" />
+
+                        <EditText
+                            android:id="@+id/street_edt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:inputType="text" />
+                    </LinearLayout>
+
+                    <!-- Choose Street End -->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/map_fields_wrap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <com.postpc.homeseek.widget.CustomButton
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/set_search_area_btn"
+                        android:onClick="onSetSearchAreaClick"
+                        android:text="@string/set_search_area_on_map"
+                        android:textColor="@color/light_blue_txt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" >
+
+                    <com.postpc.homeseek.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/rooms_num_txt" />
+
+                    <com.postpc.homeseek.widget.CustomTextView
+                        android:id="@+id/rooms_from_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="7dp"
+                        android:text="@string/from_txt"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <EditText
+                        android:id="@+id/min_rooms_edt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:inputType="numberDecimal" />
+
+                    <com.postpc.homeseek.widget.CustomTextView
+                        android:id="@+id/rooms_to_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/to_txt"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <EditText
+                        android:id="@+id/max_rooms_edt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:inputType="numberDecimal" >
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" >
+
+                    <com.postpc.homeseek.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/area_txt" />
+
+                    <com.postpc.homeseek.widget.CustomTextView
+                        android:id="@+id/area_from_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="7dp"
+                        android:text="@string/from_txt"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <EditText
+                        android:id="@+id/min_area_edt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:inputType="number" />
+
+                    <com.postpc.homeseek.widget.CustomTextView
+                        android:id="@+id/area_to_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/to_txt"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <EditText
+                        android:id="@+id/max_area_edt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:inputType="number" >
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" >
+
+                    <com.postpc.homeseek.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/price_txt" />
+
+                    <com.postpc.homeseek.widget.CustomTextView
+                        android:id="@+id/price_from_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="7dp"
+                        android:text="@string/from_txt"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <EditText
+                        android:id="@+id/min_price_edt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:inputType="number" />
+
+                    <com.postpc.homeseek.widget.CustomTextView
+                        android:id="@+id/price_to_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/to_txt"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <EditText
+                        android:id="@+id/max_price_edt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:inputType="number" >
+                    </EditText>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/status_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Middle Search Section End -->
+
+
+    <!-- Bottom Search Buttons -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="0.7"
+        android:background="@color/light_blue"
+        android:orientation="vertical" >
+
+        <com.postpc.homeseek.widget.CustomButton
+            android:id="@+id/search_apartments_btn"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/custom_button_login"
+            android:onClick="onSearchClick"
+            android:text="@string/search_apartment_confirm_btn_txt"
+            android:textColor="@color/light_blue_txt"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical" >
+
+            <com.postpc.homeseek.widget.CustomButton
+                android:id="@+id/save_search_btn"
+                android:layout_width="180dp"
+                android:layout_height="35dp"
+                android:background="@drawable/custom_button_sign_up"
+                android:onClick="onSaveSearchClick"
+                android:text="@string/save_search_btn_txt"
+                android:textAlignment="center"
+                android:textColor="@color/light_blue_txt"
+                android:textSize="15sp" />
+
+            <com.postpc.homeseek.widget.CustomButton
+                android:id="@+id/load_last_search_btn"
+                android:layout_width="180dp"
+                android:layout_height="35dp"
+                android:background="@drawable/custom_button_sign_up"
+                android:onClick="onLoadSearchClick"
+                android:text="@string/load_search_btn_txt"
+                android:textAlignment="center"
+                android:textColor="@color/light_blue_txt"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Bottom Search Buttons End -->
+
+
+    <!-- Bottom Image -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.31"
+        android:background="@color/light_blue"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/background_image_description"
+            android:scaleType="centerCrop"
+            android:src="@drawable/house" />
+    </RelativeLayout>
+
+    <!-- Bottom Image End -->
+
+</LinearLayout>

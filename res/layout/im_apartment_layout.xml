@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:layout_gravity="left"    
+    android:orientation="vertical">
+
+    <LinearLayout 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+	android:background="@drawable/bubble_shape">
+    	
+	    <com.postpc.homeseek.widget.CustomTextView
+	        android:id="@+id/chat_email"
+	        android:textSize="10sp"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textAlignment="center"
+		    android:textColor="@color/black"
+		    android:layout_marginLeft="3dp"
+		    android:layout_marginRight="3dp" />      	     
+	    
+
+	    <TextView
+	        android:id="@+id/chat_txt"
+	        android:textSize="20sp"
+	        android:padding="10dp"
+	        android:layout_margin="5dp"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textAlignment="center"
+		    android:textColor="@color/black">      	     
+	    </TextView>
+	    
+	    <com.postpc.homeseek.widget.CustomTextView
+	        android:id="@+id/apartment_link"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="5dp"
+	        android:padding="10dp"
+	        android:textSize="20sp"
+	        android:textAlignment="center"
+	        android:textColor="@color/blue"
+	        android:linksClickable="true"
+	        android:onClick="onApartmentLinkClick" />
+        
+    </LinearLayout>
+</LinearLayout>

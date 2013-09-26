@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/light_background"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <com.postpc.homeseek.widget.CustomTitleTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_contact_str"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/dark_blue_txt" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/email_edt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/enter_email_txt"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/gray" >
+        </EditText>
+
+        <com.postpc.homeseek.widget.CustomButton
+            android:id="@+id/choose_contact_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_light_background"
+            android:onClick="onChooseContactClick"
+            android:text="@string/address_book"
+            android:textColor="@color/light_blue_txt"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <com.postpc.homeseek.widget.CustomButton
+            android:id="@+id/ok_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_light_background"
+            android:onClick="onOkClick"
+            android:text="@string/ok_btn_txt"
+            android:textColor="@color/light_blue_txt"
+            android:textSize="15sp" />
+
+        <com.postpc.homeseek.widget.CustomButton
+            android:id="@+id/cancel_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_light_background"
+            android:onClick="onCancelClick"
+            android:text="@string/cancel_btn_txt"
+            android:textColor="@color/light_blue_txt"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>

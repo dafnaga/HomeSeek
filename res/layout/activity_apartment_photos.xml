@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ApartmentPhotosActivity" >
+
+    <!-- Top Ruler -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:background="@color/light_blue"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/background_image_top_ruler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/background_image_top_ruler_description"
+            android:scaleType="centerCrop"
+            android:src="@drawable/top_ruler_heigt22" />
+
+        <ImageView
+            android:id="@+id/top_ruler_separator1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="105dp"
+            android:contentDescription="@string/background_image_top_ruler_description"
+            android:src="@drawable/top_ruler_seperator" />
+
+        <ImageView
+            android:id="@+id/top_ruler_separator2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="105dp"
+            android:contentDescription="@string/background_image_top_ruler_description"
+            android:src="@drawable/top_ruler_seperator" />
+
+        <ImageView
+            android:id="@+id/top_ruler_add_photo_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="32dp"
+            android:contentDescription="@string/background_image_top_ruler_description"
+            android:onClick="onAddPhotoClick"
+            android:src="@drawable/top_ruler_add_photo_icon" />
+
+        <ImageView
+            android:id="@+id/top_ruler_share_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/background_image_top_ruler_description"
+            android:onClick="onSharePhotoClick"
+            android:src="@drawable/top_ruler_share_icon" />
+
+        <ImageView
+            android:id="@+id/top_ruler_back_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="32dp"
+            android:contentDescription="@string/background_image_top_ruler_description"
+            android:onClick="onBackBtnClick"
+            android:src="@drawable/top_ruler_back_icon" />
+    </RelativeLayout>
+
+    <!-- Top Ruler End -->
+
+    <LinearLayout
+        android:id="@+id/photo_gallery_container"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:orientation="horizontal" />
+
+</LinearLayout>

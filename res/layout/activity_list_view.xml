@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/top_ruller_bar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:background="@color/light_blue"
+        android:orientation="vertical"
+        android:visibility="gone" >
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="0.9"
+        android:background="@drawable/background_login"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical" >
+
+            <com.postpc.homeseek.widget.CustomTextView
+                android:id="@+id/activity_title_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/dark_blue_txt" />
+
+            <com.postpc.homeseek.widget.CustomTextView
+                android:id="@+id/activity_subtitle_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/dark_blue_txt" />
+
+            <ListView
+                android:id="@+id/activity_list"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:choiceMode="multipleChoice" >
+            </ListView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Bottom Button -->
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="0.1"
+        android:background="@color/light_blue"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+    </LinearLayout>
+
+    <!-- Bottom Image -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:background="@color/light_blue"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/background_image_description"
+            android:scaleType="centerCrop"
+            android:src="@drawable/house" />
+    </RelativeLayout>
+
+    <!-- Bottom Image End -->
+
+</LinearLayout>

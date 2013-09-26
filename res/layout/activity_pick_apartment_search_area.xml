@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PickApartmentSearchAreaActivity" >
+
+    <com.postpc.homeseek.widget.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. Click on the map to mark search center\n2. Use the +,- buttons to change the size of the search area."        
+        />
+    
+    <fragment
+       android:id="@+id/map"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="1"
+	   android:name="com.google.android.gms.maps.MapFragment" />
+        
+    
+	<LinearLayout
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    android:orientation="horizontal">
+	    
+	    <com.postpc.homeseek.widget.CustomTextView
+	        android:text="@string/address"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" 
+	        />
+	    
+	    <EditText 
+	        android:id="@+id/address_txt"
+	        android:layout_height="wrap_content"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        />
+	    
+	    <com.postpc.homeseek.widget.CustomButton
+	        android:layout_height="wrap_content" 
+	        android:layout_width="wrap_content"
+	        android:text="@string/find"
+	        android:onClick="onFindClick"
+	        />
+	    
+		<com.postpc.homeseek.widget.CustomButton
+	        android:layout_height="wrap_content" 
+	        android:layout_width="wrap_content"
+	        android:text="@string/ok"
+	        android:onClick="onOkClick"
+	        />	    
+	</LinearLayout>    
+	<LinearLayout
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    android:orientation="horizontal"
+	    android:weightSum="2">
+	    
+	    <com.postpc.homeseek.widget.CustomButton
+	        android:layout_height="wrap_content" 
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:text="@string/minus"
+	        android:onClick="onMinusClick"
+	        />	   
+	    <com.postpc.homeseek.widget.CustomButton
+	        android:layout_height="wrap_content" 
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:text="@string/plus"
+	        android:onClick="onPlusClick"
+	        />	    
+	</LinearLayout>	
+</LinearLayout>

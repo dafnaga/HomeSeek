@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    tools:context=".ClientActivity" >
+
+    <!-- Bottom Image -->
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/background_image_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/house" />
+
+    <!-- Top Ruler -->
+
+    <ImageView
+        android:id="@+id/background_image_top_ruler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/top_ruler_fav_icon"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/background_image_top_ruler_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/top_ruler_heigt22" />
+
+    <ImageView
+        android:id="@+id/top_ruler_separator1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/search_apartments_btn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="105dp"
+        android:contentDescription="@string/background_image_top_ruler_description"
+        android:src="@drawable/top_ruler_seperator" />
+
+    <ImageView
+        android:id="@+id/top_ruler_separator2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/background_image_top_ruler"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="105dp"
+        android:contentDescription="@string/background_image_top_ruler_description"
+        android:src="@drawable/top_ruler_seperator" />
+
+    <ImageView
+        android:id="@+id/top_ruler_map_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/search_apartments_btn"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/background_image_top_ruler_description"
+        android:onClick="onMapSearchBtnClick"
+        android:src="@drawable/top_ruler_map_search_icon" />
+
+    <ImageView
+        android:id="@+id/top_ruler_fav_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="32dp"
+        android:contentDescription="@string/background_image_top_ruler_description"
+        android:onClick="onClientApartmentsBtnClick"
+        android:src="@drawable/top_ruler_star_icon" />
+
+    <ImageView
+        android:id="@+id/top_ruler_search_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/search_apartments_btn"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="32dp"
+        android:contentDescription="@string/background_image_top_ruler_description"
+        android:onClick="onSearchApartmentsBtnClick"
+        android:src="@drawable/top_ruler_search_icon" />
+
+    <Button
+        android:id="@+id/search_apartments_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/background_image_top_ruler"
+        android:onClick="onSearchApartmentsBtnClick"
+        android:text="@string/search_apartments_btn_txt" />
+
+    <Button
+        android:id="@+id/client_apartments_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_apartments_btn"
+        android:onClick="onClientApartmentsBtnClick"
+        android:text="@string/client_apartments_btn_txt" />
+
+    <Button
+        android:id="@+id/map_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/client_apartments_btn"
+        android:layout_below="@+id/client_apartments_btn"
+        android:onClick="onMapSearchBtnClick"
+        android:text="@string/search_on_map_btn_txt" />
+
+    <Button
+        android:id="@+id/conversations_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/map_btn"
+        android:layout_alignLeft="@+id/map_btn"
+        android:onClick="onRecentConversationsClick"
+        android:text="Recent Conversations" />
+
+</RelativeLayout>

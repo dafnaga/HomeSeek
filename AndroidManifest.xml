@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.postpc.homeseek"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <permission
+        android:name="com.example.androidmapsv2.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" >
+    </permission>
+
+    <uses-permission android:name="com.example.androidmapsv2.permission.MAPS_RECEIVE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name="com.postpc.homeseek.HomeseekApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_homeseek"
+        android:label="@string/app_name"
+        android:launchMode="singleInstance"
+        android:theme="@style/AppTheme" >
+
+        <!--
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDnfozMD0n3iYy668Wxqv0S4b5KNiSfLME" />
+
+        -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyB4GNxvF8E6svH6SFJzQa54N7v1a61rWUc" />
+
+        <activity
+            android:name="com.postpc.homeseek.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.postpc.homeseek.SignUpActivity" >
+        </activity>
+        <activity android:name="com.postpc.homeseek.LoginActivity" >
+        </activity>
+        <activity android:name="com.postpc.homeseek.AddApartmentActivity" >
+        </activity>
+        <activity android:name="com.postpc.homeseek.OwnerActivity" >
+        </activity>
+        <activity android:name="com.postpc.homeseek.OwnerApartmentInfoActivity" >
+        </activity>
+        <activity android:name="com.postpc.homeseek.SearchApartmentsActivity" >
+        </activity>
+        <activity android:name="com.postpc.homeseek.AddPhotoActivity" >
+        </activity>
+        <activity android:name="com.postpc.homeseek.SearchResultsActivity" >
+        </activity>
+        <activity android:name="com.postpc.homeseek.ClientApartmentsActivity" >
+        </activity>
+        <activity android:name="com.postpc.homeseek.ClientApartmentInfoActivity" >
+        </activity>
+        <activity android:name="com.postpc.homeseek.ClientOwnerActivity" >
+        </activity>
+        <activity android:name="com.postpc.homeseek.ClientActivity" >
+        </activity>
+        <activity
+            android:name="com.postpc.homeseek.ApartmentPhotosActivity"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name="com.postpc.homeseek.ErrorOccurredActivity"
+            android:theme="@style/NoTitleDialog" >
+        </activity>
+        <activity android:name="com.postpc.homeseek.UpdateApartmentActivity" >
+        </activity>
+        <activity android:name="com.postpc.homeseek.ApartmentCalendarActivity" >
+        </activity>
+        <activity android:name="com.postpc.homeseek.OwnerMeetupActivity" >
+        </activity>
+        <activity
+            android:name="com.postpc.homeseek.AddMeetUpActivity"
+            android:theme="@style/NoTitleDialog" >
+        </activity>
+        <activity android:name="com.postpc.homeseek.ApartmentCalendarForClientActivity" >
+        </activity>
+
+        <service android:name="com.parse.PushService" />
+
+        <receiver android:name="com.postpc.homeseek.MyParseReceiver" >
+            <intent-filter>
+                <action android:name="com.postpc.homeseek.HOMESEEK_NOTIFICATION" />
+                <!-- action android:name="@string/update_apartemt_intent_filter" / -->
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.postpc.homeseek.EventHandlerReceiver" >
+            <intent-filter android:priority="1" >
+                <action android:name="com.postpc.homeseek.action.NEW_IM" />
+                <action android:name="com.postpc.homeseek.action.APARTMENT_UPDATED" />
+                <action android:name="com.postpc.homeseek.action.APARTMENT_REMOVAL" />
+                <action android:name="com.postpc.homeseek.action.MEETUP_CHANGE" />
+                <action android:name="com.postpc.homeseek.action.MEETUP_ATTENDERS_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.postpc.homeseek.ChatActivity" >
+        </activity>
+        <activity android:name="com.postpc.homeseek.MapActivity" >
+        </activity>
+        <activity android:name="com.postpc.homeseek.ApartmentClientsActivity" >
+        </activity>
+        <activity android:name="com.postpc.homeseek.PickApartmentSearchAreaActivity" >
+        </activity>
+        <activity android:name="com.postpc.homeseek.ShowMapLocationActivity" >
+        </activity>
+        <activity android:name="com.postpc.homeseek.MapSearchResultsActivity" >
+        </activity>
+        <activity android:name="com.postpc.homeseek.RecentConversationsActivity" >
+        </activity>
+        <activity
+            android:name="com.postpc.homeseek.ChooseContactActivity"
+            android:theme="@style/NoTitleDialog" >
+        </activity>
+    </application>
+
+</manifest>

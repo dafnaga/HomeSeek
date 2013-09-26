@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <com.postpc.homeseek.widget.CustomTextView
+        android:id="@+id/meetup_date_txt"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/attend_btn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp" />
+
+    <com.postpc.homeseek.widget.CustomTextView
+        android:id="@+id/meetup_hours_txt"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/attend_btn"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:layout_toRightOf="@+id/meetup_date_txt" />
+
+    <com.postpc.homeseek.widget.CustomButton
+        android:id="@+id/attend_btn"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/meetup_hours_txt"
+        android:background="@drawable/custom_button_light_background"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/light_blue_txt" />
+
+</RelativeLayout>

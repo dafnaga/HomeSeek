@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    android:orientation="vertical"
+    tools:context=".ChatActivity" >
+
+    <com.postpc.homeseek.widget.CustomTitleTextView
+        android:id="@+id/chat_title_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/dark_blue_txt"
+        android:padding="10dp" />
+
+    <ListView
+        android:id="@+id/chat_container_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:dividerHeight="0dp" >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/chat_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/chat_input_edt"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0" />
+
+        <com.postpc.homeseek.widget.CustomButton
+            android:id="@+id/send_btn"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:background="@drawable/custom_button_login"
+            android:onClick="onSendClick"
+            android:text="@string/send"
+            android:textColor="@color/light_blue_txt" />
+        
+    </LinearLayout>
+
+    <!-- Bottom Image -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.14"
+        android:background="@color/light_blue"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/background_image_description"
+            android:scaleType="centerCrop"
+            android:src="@drawable/house" />
+    </RelativeLayout>
+    <!-- Bottom Image End -->
+
+</LinearLayout>

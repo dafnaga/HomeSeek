@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <com.postpc.homeseek.widget.CustomButton
+        android:id="@+id/chat_btn"
+        android:layout_width="60dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/custom_button_light_background"
+        android:text="@string/chat"
+        android:textColor="@color/light_blue_txt"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <com.postpc.homeseek.widget.CustomTextView
+        android:id="@+id/contact_name_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/chat_btn"
+        android:layout_alignBottom="@+id/chat_btn"
+        android:layout_alignParentLeft="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

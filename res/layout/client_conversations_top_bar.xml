@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.31"
+    android:background="@color/light_blue"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/background_image_top_ruler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/background_image_top_ruler_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/top_ruler_heigt22" />
+
+    <ImageView
+        android:id="@+id/top_ruler_separator1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="80dp"
+        android:contentDescription="@string/background_image_top_ruler_description"
+        android:src="@drawable/top_ruler_seperator" />
+
+    <ImageView
+        android:id="@+id/top_ruler_separator2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/background_image_top_ruler_description"
+        android:src="@drawable/top_ruler_seperator" />
+
+    <ImageView
+        android:id="@+id/top_ruler_separator3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="80dp"
+        android:contentDescription="@string/background_image_top_ruler_description"
+        android:src="@drawable/top_ruler_seperator" />
+
+    <ImageView
+        android:id="@+id/top_ruler_search_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="22dp"
+        android:contentDescription="@string/background_image_top_ruler_description"
+        android:onClick="onSearchApartmentsBtnClick"
+        android:src="@drawable/top_ruler_search_icon" />
+
+    <ImageView
+        android:id="@+id/top_ruler_fav_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="102dp"
+        android:contentDescription="@string/background_image_top_ruler_description"
+        android:onClick="onClientApartmentsBtnClick"
+        android:src="@drawable/top_ruler_star_icon" />
+
+    <ImageView
+        android:id="@+id/top_ruler_map_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="98dp"
+        android:contentDescription="@string/background_image_top_ruler_description"
+        android:onClick="onMapSearchBtnClick"
+        android:src="@drawable/top_ruler_map_search_icon" />
+
+    <ImageView
+        android:id="@+id/top_ruler_search_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="98dp"
+        android:contentDescription="@string/background_image_top_ruler_description"
+        android:onClick="onAddressSearchBtnClick"
+        android:src="@drawable/top_ruler_search_icon"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/top_ruler_back_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="22dp"
+        android:contentDescription="@string/background_image_top_ruler_description"
+        android:onClick="onBackBtnClick"
+        android:src="@drawable/top_ruler_back_icon" />
+
+</RelativeLayout>

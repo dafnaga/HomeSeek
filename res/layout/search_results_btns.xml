@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.1"
+    android:background="@color/light_blue"
+    android:orientation="horizontal" >
+
+    <com.postpc.homeseek.widget.CustomButton
+        android:id="@+id/show_on_map_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/custom_button_login"
+        android:onClick="onShowOnMapClick"
+        android:text="@string/show_on_map"
+        android:textColor="@color/light_blue_txt"
+        android:textSize="15sp" />
+
+    <com.postpc.homeseek.widget.CustomButton
+        android:id="@+id/sort_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/custom_button_login"
+        android:onClick="onSortClick"
+        android:text="@string/sort_results_btn_txt"
+        android:textColor="@color/light_blue_txt"
+        android:textSize="15sp" />
+
+</LinearLayout>

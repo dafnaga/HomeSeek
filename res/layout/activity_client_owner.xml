@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/light_blue"
+    android:orientation="vertical"
+    tools:context=".ClientOwnerActivity" >
+
+    <LinearLayout
+        android:id="@+id/client_owner_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <com.postpc.homeseek.widget.CustomTitleTextView
+            android:id="@+id/client_owner_header"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="@string/choose_client_owner_txt"
+            android:textColor="@color/dark_blue_txt"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/client_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/light_blue"
+            android:drawableTop="@drawable/custom_button_client"
+            android:gravity="center"
+            android:onClick="onSearchApartmentBtnClick" />
+
+        <Button
+            android:id="@+id/owner_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/light_blue"
+            android:drawableTop="@drawable/custom_button_owner"
+            android:gravity="center"
+            android:onClick="onPublishApartmentBtnClick" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:background="@color/light_blue"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/background_image_description"
+            android:scaleType="centerCrop"
+            android:src="@drawable/house" />
+    </RelativeLayout>
+
+</LinearLayout>

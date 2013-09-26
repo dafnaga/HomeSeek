@@ -1,0 +1,207 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    android:orientation="vertical" >
+
+    <!-- Top Ruler -->
+
+    <RelativeLayout
+        android:id="@+id/top_ruller_bar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:background="@color/light_blue"
+        android:orientation="vertical"
+        android:visibility="gone" >
+    </RelativeLayout>
+
+    <!-- Top Ruler End -->
+
+
+    <!-- Middle Section -->
+
+    <ScrollView
+        android:id="@+id/scroll_owner_info"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.59"
+        android:background="@drawable/background_login"
+        android:padding="22dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" >
+
+            <com.postpc.homeseek.widget.CustomTitleTextView
+                android:id="@+id/activity_title_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/add_new_apartment_txt"
+                android:textColor="@color/dark_blue_txt"
+                android:textSize="26sp" />
+
+            <LinearLayout
+                android:id="@+id/city_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <com.postpc.homeseek.widget.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/city_txt" />
+
+                <EditText
+                    android:id="@+id/city_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" >
+                </EditText>
+            </LinearLayout>
+
+            <com.postpc.homeseek.widget.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/neighborhood_txt" />
+
+            <EditText
+                android:id="@+id/neighborhood_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" >
+            </EditText>
+
+            <LinearLayout
+                android:id="@+id/street_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <com.postpc.homeseek.widget.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/street_txt" />
+
+                <EditText
+                    android:id="@+id/street_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" >
+                </EditText>
+            </LinearLayout>
+
+            <com.postpc.homeseek.widget.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/building_num_txt" />
+
+            <EditText
+                android:id="@+id/building_num_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" >
+            </EditText>
+
+            <com.postpc.homeseek.widget.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/apartment_num_txt" />
+
+            <EditText
+                android:id="@+id/apartment_num_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" >
+            </EditText>
+
+            <com.postpc.homeseek.widget.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rooms_num_txt" />
+
+            <EditText
+                android:id="@+id/rooms_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" >
+            </EditText>
+
+            <com.postpc.homeseek.widget.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/area_txt" />
+
+            <EditText
+                android:id="@+id/area_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" >
+            </EditText>
+
+            <com.postpc.homeseek.widget.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/price_txt" />
+
+            <EditText
+                android:id="@+id/price_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" >
+            </EditText>
+
+            <com.postpc.homeseek.widget.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/comments_txt" />
+
+            <EditText
+                android:id="@+id/owner_comments_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </EditText>
+
+            <LinearLayout
+                android:id="@+id/btn_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Middle Section End -->
+
+
+    <!-- Bottom Image -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:background="@color/light_blue"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/background_image_description"
+            android:scaleType="centerCrop"
+            android:src="@drawable/house" />
+    </RelativeLayout>
+
+    <!-- Bottom Image End -->
+
+</LinearLayout>
