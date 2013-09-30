@@ -260,10 +260,10 @@
                         android:focusableInTouchMode="true"
                         android:freezesText="true"
                         android:gravity="left"
+                        android:lines="2"
                         android:marqueeRepeatLimit="marquee_forever"
-                        android:scrollHorizontally="true"
                         android:maxLines="2"
-                        android:lines="2" />
+                        android:scrollHorizontally="true" />
 
                     <com.postpc.homeseek.widget.CustomButton
                         android:id="@+id/save_comments_btn"
@@ -280,41 +280,38 @@
 
         <com.postpc.homeseek.widget.CustomButton
             android:id="@+id/addButton"
+            style="@style/btn_info_fav_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/btn_info_background"
             android:drawablePadding="-8sp"
-            android:drawableTop="@drawable/icon_add_to_fav_info"
             android:onClick="onSubscribeBtnClick"
             android:paddingTop="8sp"
             android:text="@string/subscribe_to_ap_btn"
             android:textColor="@color/light_blue_txt"
             android:textSize="10sp" />
 
-
         <LinearLayout
             android:id="@+id/client_btns_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_gravity="center"
+            android:orientation="vertical"
             android:visibility="gone" >
 
             <LinearLayout
                 android:id="@+id/btns_row_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-				android:gravity="center"  >
+                android:gravity="center" >
 
                 <com.postpc.homeseek.widget.CustomButton
                     android:id="@+id/navigate_btn"
+                    style="@style/btn_info_navigate_icon"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/btn_info_background"
                     android:drawablePadding="-8sp"
-                    android:drawableTop="@drawable/icon_navigate_info"
                     android:onClick="onNavigateClick"
                     android:paddingTop="8sp"
                     android:text="@string/navigate_to_apartment"
@@ -323,13 +320,12 @@
 
                 <com.postpc.homeseek.widget.CustomButton
                     android:id="@+id/chat_with_owner_btn"
+                    style="@style/btn_info_chat_icon"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:background="@drawable/btn_info_background"
                     android:drawablePadding="-8sp"
-                    android:drawableTop="@drawable/icon_chat_info"
                     android:onClick="onChatWithOwnerClick"
                     android:paddingTop="8sp"
                     android:text="@string/chat_with_owner"
@@ -338,13 +334,12 @@
 
                 <com.postpc.homeseek.widget.CustomButton
                     android:id="@+id/calendar_btn"
+                    style="@style/btn_info_calendar_icon"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:background="@drawable/btn_info_background"
                     android:drawablePadding="-8sp"
-                    android:drawableTop="@drawable/icon_calendar_info"
                     android:onClick="onCalendarBtnClick"
                     android:paddingTop="8sp"
                     android:text="@string/apartment_calendar_btn"
@@ -356,17 +351,16 @@
                 android:id="@+id/btns_row_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center" 
+                android:layout_gravity="center"
                 android:gravity="center" >
 
                 <com.postpc.homeseek.widget.CustomButton
                     android:id="@+id/share_btn"
+                    style="@style/btn_info_share_icon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:background="@drawable/btn_info_background"
                     android:drawablePadding="-8sp"
-                    android:drawableTop="@drawable/icon_share_with_friends_info"
                     android:onClick="onShareBtnClick"
                     android:paddingTop="8sp"
                     android:text="@string/apartment_share_btn"
@@ -375,12 +369,11 @@
 
                 <com.postpc.homeseek.widget.CustomButton
                     android:id="@+id/removeButton"
+                    style="@style/btn_info_remove_icon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:background="@drawable/btn_info_background"
                     android:drawablePadding="-8sp"
-                    android:drawableTop="@drawable/icon_remove_from_fav_info"
                     android:onClick="onUnsubscribeBtnClick"
                     android:paddingTop="8sp"
                     android:text="@string/unsubscribe_from_ap_btn"

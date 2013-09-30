@@ -11,7 +11,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-	android:background="@drawable/bubble_shape">
+	android:background="@drawable/chat_bubble">
     	
 	    <com.postpc.homeseek.widget.CustomTextView
 	        android:id="@+id/chat_email"
@@ -20,11 +20,12 @@
 		    android:layout_height="wrap_content"
 		    android:textAlignment="center"
 		    android:textColor="@color/black"
-		    android:layout_marginLeft="3dp"
-		    android:layout_marginRight="3dp" />      	     
+		    android:layout_marginLeft="8dp"
+		    android:layout_marginRight="8dp"
+		    android:layout_marginTop="8dp" />      	     
 	    
 
-	    <TextView
+	    <com.postpc.homeseek.widget.CustomTextView
 	        android:id="@+id/chat_txt"
 	        android:textSize="20sp"
 	        android:padding="10dp"
@@ -32,15 +33,16 @@
 		    android:layout_width="wrap_content"
 		    android:layout_height="wrap_content"
 		    android:textAlignment="center"
-		    android:textColor="@color/black">      	     
-	    </TextView>
+		    android:textColor="@color/black" />      	     
 	    
 	    <com.postpc.homeseek.widget.CustomTextView
 	        android:id="@+id/apartment_link"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_margin="5dp"
-	        android:padding="10dp"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+	        android:paddingBottom="10dp"
 	        android:textSize="20sp"
 	        android:textAlignment="center"
 	        android:textColor="@color/blue"

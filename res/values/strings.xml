@@ -121,5 +121,8 @@
     <string name="switch_to_map_search">Switch to Map Search</string>
     <string name="switch_to_address_search">Switch to Address Search</string>
     <string name="address_book">Address Book</string>
+    <string name="i_want_to_">I want to..</string>
+    <string name="rent_buy_an_apartment">Rent/Buy an apartment</string>
+    <string name="publish_an_apartment_for_sell_rent">Publish an apartment</string>
 
 </resources>

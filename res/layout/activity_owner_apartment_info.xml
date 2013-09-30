@@ -15,7 +15,7 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin" >
 
-                <RelativeLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
 
@@ -37,7 +37,7 @@
                 android:onClick="onShowPhotosClick"
                 android:src="@drawable/add_photo_icon_big" />
         </RelativeLayout>
-        
+
         <com.postpc.homeseek.widget.CustomTextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -300,8 +300,6 @@
                 android:maxLines="5" />
         </LinearLayout>
 
-
-
         <!-- <Button -->
         <!-- android:id="@+id/add_photo_btn" -->
         <!-- android:layout_width="match_parent" -->
@@ -324,12 +322,11 @@
 
             <com.postpc.homeseek.widget.CustomButton
                 android:id="@+id/clients_list_btn"
+                style="@style/btn_info_view_clients_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/btn_info_background"
                 android:drawablePadding="-8sp"
-                android:drawableTop="@drawable/icon_view_clients_info"
                 android:onClick="onClientsListClick"
                 android:paddingTop="8sp"
                 android:text="@string/view_clients_list"
@@ -338,12 +335,11 @@
 
             <com.postpc.homeseek.widget.CustomButton
                 android:id="@+id/apartment_calendar_btn"
+                style="@style/btn_info_calendar_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/btn_info_background"
                 android:drawablePadding="-8sp"
-                android:drawableTop="@drawable/icon_calendar_info"
                 android:onClick="onCalendarClick"
                 android:paddingTop="8sp"
                 android:text="@string/set_visiting_hours_str"
@@ -358,33 +354,29 @@
 
             <com.postpc.homeseek.widget.CustomButton
                 android:id="@+id/edit_apartment_btn"
+                style="@style/btn_info_edit_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/btn_info_background"
                 android:drawablePadding="-8sp"
-                android:drawableTop="@drawable/icon_edit_apartment_info"
                 android:onClick="onEditClick"
                 android:paddingTop="8sp"
                 android:text="@string/edit_apartment"
                 android:textColor="@color/light_blue_txt"
                 android:textSize="10sp" />
-            
+
             <com.postpc.homeseek.widget.CustomButton
                 android:id="@+id/remove_apartment_btn"
+                style="@style/btn_info_delete_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/btn_info_background"
                 android:drawablePadding="-8sp"
-                android:drawableTop="@drawable/icon_delete_apartment_info"
                 android:onClick="onRemoveClick"
                 android:paddingTop="8sp"
                 android:text="@string/apartment_remove"
                 android:textColor="@color/light_blue_txt"
                 android:textSize="10sp" />
-
-            
         </LinearLayout>
     </LinearLayout>
 

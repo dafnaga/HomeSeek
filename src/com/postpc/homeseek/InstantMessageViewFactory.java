@@ -32,8 +32,11 @@ public class InstantMessageViewFactory {
 		
 		if (currentUser.getId().equals(im.getFromUserId())) {
 			((LinearLayout)view).setGravity(Gravity.RIGHT);
+			//((LinearLayout)view).setBackgroundResource(R.drawable.chat_bubble_client);
+			
 		} else {
 			((LinearLayout)view).setGravity(Gravity.LEFT);
+			//((LinearLayout)view).setBackgroundResource(R.drawable.chat_bubble_other);
 		}
 		
 		return view;

@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/bubble_shape"
+        android:background="@drawable/chat_bubble"
         android:orientation="vertical" >
     	
 	    <com.postpc.homeseek.widget.CustomTextView
@@ -21,8 +21,9 @@
 		    android:layout_height="wrap_content"
 		    android:textAlignment="center"
 		    android:textColor="@color/black"
-		    android:layout_marginLeft="3dp"
-		    android:layout_marginRight="3dp" />      	     
+		 android:layout_marginLeft="8dp"
+		    android:layout_marginRight="8dp"
+		    android:layout_marginTop="8dp" />
 	    
 	    
 	    <com.postpc.homeseek.widget.CustomTextView
