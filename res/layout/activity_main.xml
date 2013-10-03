@@ -23,12 +23,9 @@
             android:layout_marginTop="20dp"
             android:text="@string/app_name"
             android:textColor="@color/dark_blue_txt"
-            android:textSize="120sp" />
-        -->
-
-
-        <!--
-                          <com.postpc.homeseek.widget.CustomLogoBackgroundTextView
+            android:textSize="120sp" />         -->
+  
+        <!-- <com.postpc.homeseek.widget.CustomLogoBackgroundTextView
             android:id="@+id/logo_header_background"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -40,13 +37,12 @@
             android:layout_marginTop="6dp"
             android:text="@string/app_name"
             android:textColor="@color/dark_blue_txt"
-            android:textSize="40sp" />
-        -->
+            android:textSize="40sp" />        -->
 
         <com.postpc.homeseek.widget.CustomButton
             android:id="@+id/signup_btn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_alignLeft="@+id/login_btn"
             android:layout_below="@+id/logo_header"
             android:layout_marginTop="28dp"
@@ -69,7 +65,7 @@
         <com.postpc.homeseek.widget.CustomButton
             android:id="@+id/login_btn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_below="@+id/signup_btn"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="37dp"
@@ -78,7 +74,6 @@
             android:text="@string/login_btn_txt"
             android:textColor="@color/light_blue_txt"
             android:textSize="25sp" />
-
     </RelativeLayout>
 
     <ImageView

@@ -11,7 +11,7 @@
         android:id="@+id/top_ruller_bar_layout"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.2"
+        android:layout_weight="0.16"
         android:background="@color/light_blue"
         android:orientation="vertical"
         android:visibility="gone" >

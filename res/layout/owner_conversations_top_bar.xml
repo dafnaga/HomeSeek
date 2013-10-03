@@ -1,68 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background_image_top_ruler"
     android:layout_width="fill_parent"
-    android:layout_height="0dp"
-    android:layout_weight="0.31"
-    android:background="@color/light_blue"
-    android:orientation="vertical" >
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:background="@drawable/top_ruler_heigt22"
+    android:orientation="horizontal"
+    android:scaleType="centerCrop" >
 
-    <ImageView
-        android:id="@+id/background_image_top_ruler"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:contentDescription="@string/background_image_top_ruler_description"
-        android:scaleType="centerCrop"
-        android:src="@drawable/top_ruler_heigt22" />
-
-    <ImageView
+    <ImageButton
         android:id="@+id/top_ruler_add_apartment_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="22dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:background="@drawable/top_ruler_heigt22"
         android:contentDescription="@string/background_image_top_ruler_description"
         android:onClick="onNewApartmentBtnClick"
+        android:padding="2dip"
+        android:scaleType="centerInside"
         android:src="@drawable/top_ruler_add_apartment_icon" />
-
-    <ImageView
-        android:id="@+id/top_ruler_back_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="22dp"
-        android:contentDescription="@string/background_image_top_ruler_description"
-        android:onClick="onBackBtnClick"
-        android:src="@drawable/top_ruler_back_icon" />
-
-    <ImageView
-        android:id="@+id/top_ruler_apartemnts_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/separetor1"
-        android:layout_centerHorizontal="true"
-        android:contentDescription="@string/background_image_top_ruler_description"
-        android:onClick="onOwnerApartmentsBtnClick"
-        android:src="@drawable/top_ruler_star_icon" />
 
     <ImageView
         android:id="@+id/separetor1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="35dp"
-        android:layout_toRightOf="@+id/top_ruler_apartemnts_icon"
         android:contentDescription="@string/background_image_top_ruler_description"
         android:src="@drawable/top_ruler_seperator" />
 
-    <ImageView
+      <ImageButton
+        android:id="@+id/top_ruler_owner_apartments_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="35dp"
-        android:layout_toRightOf="@+id/top_ruler_add_apartment_icon"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:background="@drawable/top_ruler_heigt22"
+        android:contentDescription="@string/background_image_top_ruler_description"
+        android:onClick="onOwnerApartmentsBtnClick"
+        android:padding="2dip"
+        android:scaleType="centerInside"
+        android:src="@drawable/top_ruler_star_icon" />
+    
+ <ImageView
+        android:id="@+id/separetor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:contentDescription="@string/background_image_top_ruler_description"
         android:src="@drawable/top_ruler_seperator" />
 
-</RelativeLayout>
+    <ImageButton
+        android:id="@+id/top_ruler_back_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:background="@drawable/top_ruler_heigt22"
+        android:contentDescription="@string/background_image_top_ruler_description"
+        android:onClick="onBackBtnClick"
+        android:padding="2dip"
+        android:scaleType="centerInside"
+        android:src="@drawable/top_ruler_back_icon" />
+
+</LinearLayout>

@@ -8,107 +8,101 @@
 
     <!-- Top Ruler -->
 
-    <RelativeLayout
+    <LinearLayout
+        android:id="@+id/background_image_top_ruler"
         android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.31"
-        android:background="@color/light_blue"
-        android:orientation="vertical" >
+        android:layout_height="44dp"
+        android:background="@drawable/top_ruler_heigt22"
+        android:orientation="horizontal"
+        android:scaleType="centerCrop" >
 
-        <ImageView
-            android:id="@+id/background_image_top_ruler"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:contentDescription="@string/background_image_top_ruler_description"
-            android:scaleType="centerCrop"
-            android:src="@drawable/top_ruler_heigt22" />
-
-        <ImageView
-            android:id="@+id/top_ruler_separator1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="80dp"
-            android:contentDescription="@string/background_image_top_ruler_description"
-            android:src="@drawable/top_ruler_seperator" />
-
-        <ImageView
-            android:id="@+id/top_ruler_separator2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:contentDescription="@string/background_image_top_ruler_description"
-            android:src="@drawable/top_ruler_seperator" />
-
-        <ImageView
-            android:id="@+id/top_ruler_separator3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginRight="80dp"
-            android:contentDescription="@string/background_image_top_ruler_description"
-            android:src="@drawable/top_ruler_seperator" />
-
-        <ImageView
+        <ImageButton
             android:id="@+id/top_ruler_fav_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="22dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/top_ruler_heigt22"
             android:contentDescription="@string/background_image_top_ruler_description"
             android:onClick="onClientApartmentsBtnClick"
+            android:padding="2dip"
+            android:scaleType="centerInside"
             android:src="@drawable/top_ruler_star_icon" />
 
         <ImageView
+            android:id="@+id/separetor1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/background_image_top_ruler_description"
+            android:src="@drawable/top_ruler_seperator" />
+
+        <ImageButton
             android:id="@+id/top_ruler_chat_msg_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="102dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/top_ruler_heigt22"
             android:contentDescription="@string/background_image_top_ruler_description"
             android:onClick="onRecentConversationsClick"
+            android:padding="2dip"
+            android:scaleType="centerInside"
             android:src="@drawable/top_ruler_chat_msg_icon" />
 
         <ImageView
+            android:id="@+id/separetor2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/background_image_top_ruler_description"
+            android:src="@drawable/top_ruler_seperator" />
+
+        <ImageButton
             android:id="@+id/top_ruler_map_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginRight="98dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/top_ruler_heigt22"
             android:contentDescription="@string/background_image_top_ruler_description"
             android:onClick="onMapSearchBtnClick"
+            android:padding="2dip"
+            android:scaleType="centerInside"
             android:src="@drawable/top_ruler_map_search_icon" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/top_ruler_search_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginRight="98dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/top_ruler_heigt22"
             android:contentDescription="@string/background_image_top_ruler_description"
             android:onClick="onSearchApartmentsBtnClick"
+            android:padding="2dip"
+            android:scaleType="centerInside"
             android:src="@drawable/top_ruler_search_icon"
             android:visibility="gone" />
 
         <ImageView
+            android:id="@+id/separetor3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/background_image_top_ruler_description"
+            android:src="@drawable/top_ruler_seperator" />
+
+        <ImageButton
             android:id="@+id/top_ruler_back_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="22dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/top_ruler_heigt22"
             android:contentDescription="@string/background_image_top_ruler_description"
             android:onClick="onBackBtnClick"
+            android:padding="2dip"
+            android:scaleType="centerInside"
             android:src="@drawable/top_ruler_back_icon" />
-    </RelativeLayout>
+    </LinearLayout>
 
     <!-- Top Ruler End -->
 
@@ -138,29 +132,29 @@
                 android:textSize="30sp" />
 
             <com.postpc.homeseek.widget.CustomButton
-                 android:layout_width="match_parent"
-                 android:layout_height="30dp"
-                 android:layout_marginBottom="7dp"
-                 android:layout_marginTop="7dp"
-                 android:background="@drawable/set_search_area_btn"
-                 android:onClick="onMapSearchBtnClick"
-                 android:text="@string/switch_to_map_search"
-                 android:textColor="@color/light_blue_txt"
-                 android:id="@+id/switch_to_map_btn"
-                 android:visibility="gone" />
-            
+                android:id="@+id/switch_to_map_btn"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/set_search_area_btn"
+                android:onClick="onMapSearchBtnClick"
+                android:text="@string/switch_to_map_search"
+                android:textColor="@color/light_blue_txt"
+                android:visibility="gone" />
+
             <com.postpc.homeseek.widget.CustomButton
-                 android:layout_width="match_parent"
-                 android:layout_height="30dp"
-                 android:layout_marginBottom="7dp"
-                 android:layout_marginTop="7dp"
-                 android:background="@drawable/set_search_area_btn"
-                 android:onClick="onSearchApartmentsBtnClick"
-                 android:text="@string/switch_to_address_search"
-                 android:textColor="@color/light_blue_txt"
-                 android:id="@+id/switch_to_address_btn"                 
-                 android:visibility="gone" />
-            
+                android:id="@+id/switch_to_address_btn"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/set_search_area_btn"
+                android:onClick="onSearchApartmentsBtnClick"
+                android:text="@string/switch_to_address_search"
+                android:textColor="@color/light_blue_txt"
+                android:visibility="gone" />
+
             <LinearLayout
                 android:id="@+id/search_apatment_layout"
                 android:layout_width="match_parent"
